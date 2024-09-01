@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Todo Application - Beta</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="social-icons.css" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <h2>My Todo Application</h2>
+            <div class="menu-btn">&#9776;</div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact us</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" title="twitter">
+                        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" title="instagram">
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" title="linkedin">
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    </a>
+                    <a href="#" title="pinterest">
+                        <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <main>
+            <h1>Todo List</h1>
+            <div class="lists">
+                <!-- The rest of the elements here -->
+            </div>
+            <dl class="item add-item" id="addBtn">
+                <dt>Add a new task</dt>
+                <div class="plus-symbol"></div>
+            </dl>
+        </main>
+        <!-- Adding popup -->
+        <div id="popup" class="popup">
+            <form method="POST" id="popupForm" class="popup-content add">
+                <span class="close-btn">&times;</span>
+                <h2>Task details</h2>
+                <input
+                    type="text"
+                    maxlength="30"
+                    placeholder="Enter the title"
+                    name="title"
+                />
+                <textarea
+                    rows="8"
+                    placeholder="Enter the description"
+                    name="desc"
+                ></textarea>
+                <span>
+                    End Date :
+                    <input
+                        type="date"
+                        maxlength="2"
+                        placeholder="Days"
+                        name="date"
+                    />
+                </span>
+                <span>
+                    End Time :
+                    <input
+                        type="time"
+                        maxlength="2"
+                        placeholder="Hours"
+                        name="time"
+                    />
+                </span>
+                <div>
+                    <button id="submit" type="submit">Submit</button>
+                    <button id="closePopupBtn" onclick="return false">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </div>
+        <!-- closing of popup message -->
+        <footer>&copy; Amruth - TodoApp@2024</footer>
+        <script src="handle-menu.js"></script>
+        <script src="script.js"></script>
+        <script src="drag.js"></script>
+    </body>
+</html>
