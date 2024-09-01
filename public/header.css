@@ -1,0 +1,46 @@
+header {
+    display: flex;
+    background: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+header .menu-btn {
+    font-size: 20px;
+}
+
+header .menu {
+    display: none;
+    text-align: center;
+    position: absolute;
+    top: 59px;
+    left: 0; /* Start off-screen */
+    width: 100px;
+    height: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 30px;
+    transition:
+        transform 0.3s ease,
+        left 0.3s ease;
+}
+
+header .menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .menu ul li {
+    margin: 17px;
+}
+
+a {
+    color: #999;
+    text-decoration: none;
+}
